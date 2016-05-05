@@ -1,0 +1,6 @@
+.env
+.c9/
+client/
+data/
+node_modules/
+mongod
