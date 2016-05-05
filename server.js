@@ -69,9 +69,10 @@ app.get('/new/:url*', function (req, res) {
 
 app.get("/:short", function (req, res) {
     var clean = sanitize(req.params.short)
+    clean = process.env.APPURL + clean
     urlPairModel.find({shortUrl: req.params.short}, function (err, query) {
         if (err) throw(err)
-        if (!query) {
+        if (query == undefined) {
             res.send("I don't know that shortUrl")
         }
         
