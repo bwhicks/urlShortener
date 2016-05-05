@@ -2,10 +2,10 @@ var express = require('express')
 var url = require('url') 
 var validUrl = require('valid-url') 
 var shortid = require('shortid') 
-var env = require('node-env-file');
+//var env = require('node-env-file');
 var sanitize = require('mongo-sanitize');
 
-env(__dirname + '/.env')
+//env(__dirname + '/.env')
 
 
 var urlPairModel = require('./urlPair.js')
